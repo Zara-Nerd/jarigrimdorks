@@ -55,6 +55,7 @@ body {
   flex: 0 1 auto;
   align-items: center;
   flex-flow: column;
+  padding: 0 25px;
 }
 
 .footer {
@@ -84,7 +85,7 @@ body {
   text-align: center;
 }
 
-#content img {
+#content img, #content video {
   margin: 0 -25px;
 }
 
