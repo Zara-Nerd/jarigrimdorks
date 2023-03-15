@@ -78,6 +78,7 @@ body {
   font-size: 32px;
   padding: 15px 0;
   max-width: 590px;
+  margin: auto
 }
 
 #content {
