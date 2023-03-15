@@ -55,6 +55,9 @@ body {
   flex: 0 1 auto;
   align-items: center;
   flex-flow: column;
+}
+
+.story-text {
   padding: 0 25px;
 }
 
