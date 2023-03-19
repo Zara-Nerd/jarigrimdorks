@@ -120,6 +120,10 @@ body {
 .spoiler {
 	border: 1px dashed gray;
 	padding: 1px;
+
+  
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
 }
 
 .spoiler>div:last-child {
