@@ -1,3 +1,8 @@
+@font-face {
+  font-family: zara;
+  src: url(./BAHNSCHRIFT.TTF);
+}
+
 body {
   background: #5a5a5a;
   margin: 0;
@@ -85,8 +90,10 @@ body {
   padding: 0 25px;
   line-height: 1.15;
   margin: 0 0 30px 0;
-  font-size: 14px;
-  text-align: center;
+  font-size: 16px;
+  text-align: left;
+
+  font-family: zara;
 }
 
 #content img, #content video {
