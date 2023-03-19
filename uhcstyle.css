@@ -126,12 +126,12 @@ body {
   font-size: 14px;
 }
 
-.spoiler>div:last-child {
+.spoiler > div:last-child {
 	margin: 12px 5%;
 	padding: 3px;
 	text-align: left;
 }
 
-.spoiler.closed>div:last-child {
+.spoiler input, .spoiler button {
 	display: none;
 }
