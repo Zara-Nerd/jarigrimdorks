@@ -135,3 +135,11 @@ body {
 .spoiler input, .spoiler button {
 	display: none;
 }
+
+#content {
+    font-weight: normal;
+}
+
+.spoiler {
+    font-weight: 600;
+}
