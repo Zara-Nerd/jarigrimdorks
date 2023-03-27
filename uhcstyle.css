@@ -136,6 +136,14 @@ body {
 	display: none;
 }
 
+#content {
+  font-weight: normal;
+}
+
+.spoiler {
+  font-weight: 600;
+}
+
 /* DARK */
 
 * { transition: background-color 1s; }
@@ -152,11 +160,4 @@ body {
 
 .dark .story-text {
   color: white
-}
-#content {
-    font-weight: normal;
-}
-
-.spoiler {
-    font-weight: 600;
 }
