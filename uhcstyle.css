@@ -135,3 +135,21 @@ body {
 .spoiler input, .spoiler button {
 	display: none;
 }
+
+/* DARK */
+
+* { transition: background-color 1s; }
+.footer { transition: opacity 1s; }
+.story-text { transition: color 1s; }
+
+.dark, .dark .main *:not(.story-text, .story-text *, nav, nav *, a, .footer, .footer *) {
+  background-color: black !important;
+}
+
+.dark .footer {
+  opacity: 0;
+}
+
+.dark .story-text {
+  color: white
+}
