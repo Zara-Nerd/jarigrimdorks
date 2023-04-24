@@ -66,6 +66,7 @@ body {
   flex: 0 1 auto;
   align-items: center;
   flex-flow: column;
+  width: min-content;
 }
 
 .story-text {
