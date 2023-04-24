@@ -166,3 +166,63 @@ body {
 .dark .story-text {
   color: white
 }
+
+/* SUNSET */
+
+.sunset, .sunset * { transition: background-color 40s; }
+.sunset .footer { transition: opacity 40s; }
+
+.sunset {
+  background-color: #673133;
+}
+
+.sunset .pageFrame {
+  background-color: #e28e5b;
+}
+
+.sunset .pageContent {
+  background-color: #fec75e;
+}
+
+.sunset .footer {
+  opacity: 0.5;
+}
+
+/* TWILIGHT */
+
+.twilight, .twilight * { transition: background-color 1s; }
+.twilight .footer { transition: opacity 1s; }
+
+.twilight {
+  background-color: #2f0804;
+}
+
+.twilight .pageFrame {
+  background-color: #bc3617;
+}
+
+.twilight .pageContent {
+  background-color: #ff6829;
+}
+
+.twilight .footer {
+  opacity: 0.5;
+}
+
+/* NIGHTSKY */
+
+.nightsky {
+  background-color: #22274e !important;
+}
+
+.nightsky .pageFrame {
+  background-color: #608ce6 !important;
+}
+
+.nightsky .pageContent {
+  background-color: #c6fcff !important;
+}
+
+.nightsky .footer {
+  opacity: 0.5;
+}
