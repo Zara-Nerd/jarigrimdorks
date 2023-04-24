@@ -1,3 +1,8 @@
+video {
+  width: 650px;
+}
+
+
 @font-face {
   font-family: zara;
   src: url(./BAHNSCHRIFT.TTF);
