@@ -234,3 +234,20 @@ body {
   transition: width 10s;
   width: 950px;
 }
+
+#play {
+	width: 600px;
+	height: 450px;
+	display: flex;
+	justify-content: center;
+  align-items: center;
+	margin-top: -450px;
+}
+
+#play:hover {
+	opacity: 0.8;
+}
+
+#play img {
+  width: 200px
+}

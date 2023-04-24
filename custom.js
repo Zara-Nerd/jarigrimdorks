@@ -1,12 +1,28 @@
 const jsonURL = "https://zara-nerd.github.io/jari-data/adventure.json"
 
-// window.onload = () => {
-//   MSPFA.slide.push(() => {
-//     console.log("vriska")
-//   })
-// }
+window.onload = () => {
+  MSPFA.slide.push(() => {
+
+    if (document.getElementById("play")) {
+      document.getElementById("play").addEventListener("click", () => {
+        document.querySelector("#video111").play()
+        document.querySelector("#play").remove()
+      })
+      console.log("vriska")
+    }
+
+  })
+}
 
 setInterval(() => {
+  if (document.querySelector("#play")) {
+    document.getElementById("play").onclick = () => {
+      document.querySelector("#video111").play()
+      document.querySelector("#play").remove()
+    }
+  }
+  
+
   if (document.querySelector("#video111")) {
     let vidTime = document.querySelector("#video111").currentTime
     
