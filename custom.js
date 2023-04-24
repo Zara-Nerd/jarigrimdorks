@@ -28,7 +28,7 @@ setInterval(() => {
     
     document.body.className = "mspfa p111"
     if (vidTime > 67 && vidTime < 144.5) document.body.className = "mspfa p111 sunset"
-    if (vidTime > 117. && vidTime < 144.5) document.body.className = "mspfa p111 twilight"
+    if (vidTime > 117.5 && vidTime < 144.5) document.body.className = "mspfa p111 twilight"
     if (vidTime > 121.5 && vidTime < 144.5) document.body.className = "mspfa p111 nightsky"
     if (vidTime > 138 && vidTime < 144.5) document.body.className = "mspfa p111 nightsky widescreen"
     if (vidTime > 144.5 && vidTime < 241) document.body.className = "mspfa p111 dark widescreen"
