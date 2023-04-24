@@ -15,13 +15,13 @@ window.onload = () => {
 }
 
 setInterval(() => {
+
   if (document.querySelector("#play")) {
     document.getElementById("play").onclick = () => {
       document.querySelector("#video111").play()
       document.querySelector("#play").remove()
     }
   }
-  
 
   if (document.querySelector("#video111")) {
     let vidTime = document.querySelector("#video111").currentTime

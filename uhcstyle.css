@@ -242,6 +242,8 @@ body {
 	justify-content: center;
   align-items: center;
 	margin-top: -450px;
+  z-index: 500;
+  position: relative;
 }
 
 #play:hover {
