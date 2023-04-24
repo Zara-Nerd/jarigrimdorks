@@ -33,6 +33,5 @@ setInterval(() => {
     if (vidTime > 138 && vidTime < 144.5) document.body.className = "mspfa p111 nightsky widescreen"
     if (vidTime > 144.5 && vidTime < 241) document.body.className = "mspfa p111 dark widescreen"
     if (vidTime > 238 && vidTime < 241) document.body.className = "mspfa p111 dark"
-    console.log(document.querySelector("#video111").currentTime > 144.5)
   }
 }, 100);
