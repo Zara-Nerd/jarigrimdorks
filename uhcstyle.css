@@ -175,15 +175,6 @@ body {
 
 /* DARK */
 
-/* .dark, .dark .main *:not(.story-text, .story-text *, nav, nav *, a, .footer, .footer *) {
-  background-color: black !important;
-}
-
-.dark .footer {
-  opacity: 0;
-}
-*/
-
 .dark .story-text {
   color: white
 } 
@@ -201,6 +192,28 @@ body {
 }
 
 .dark .footer {
+  opacity: 0;
+}
+
+/* BRIGHT */
+
+.bright .story-text {
+  color: black
+} 
+
+.bright {
+  background-color: #fff;
+}
+
+.bright .pageFrame {
+  background-color: #fff;
+}
+
+.bright .pageContent {
+  background-color: #fff;
+}
+
+.bright .footer {
   opacity: 0;
 }
 
