@@ -151,11 +151,29 @@ body {
   font-weight: 600;
 }
 
-/* DARK */
+/* TRANSITIONS */
 
 * { transition: background-color 1s; }
 .footer { transition: opacity 1s; }
 .story-text { transition: color 1s; }
+
+.trans120, .trans120 * { transition: background-color 120s; }
+.trans120 .footer { transition: opacity 120s; }
+
+.trans60, .trans60 * { transition: background-color 60s; }
+.trans60 .footer { transition: opacity 60s; }
+
+.trans30, .trans30 * { transition: background-color 30s; }
+.trans30 .footer { transition: opacity 30s; }
+
+.trans10, .trans10 * { transition: background-color 10s; }
+.trans10 .footer { transition: opacity 10s; }
+
+.trans5, .trans5 * { transition: background-color 5s; }
+.trans5 .footer { transition: opacity 5s; }
+
+
+/* DARK */
 
 /* .dark, .dark .main *:not(.story-text, .story-text *, nav, nav *, a, .footer, .footer *) {
   background-color: black !important;
