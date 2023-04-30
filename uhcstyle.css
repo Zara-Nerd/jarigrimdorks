@@ -217,6 +217,9 @@ body {
   opacity: 0;
 }
 
+.bright .navList a:nth-child(n):nth-child(-n+1) {
+  color: #000;
+}
 
 /* SUNSET */
 
