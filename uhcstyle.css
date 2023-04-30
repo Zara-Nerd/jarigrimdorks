@@ -306,3 +306,47 @@ body {
 #play img {
   width: 200px
 }
+
+/* 1/3Dark */
+
+.dark3 .story-text {
+  color: white
+} 
+
+.dark3 {
+  background-color: #3c3c3c;
+}
+
+.dark3 .pageFrame {
+  background-color: #848484;
+}
+
+.dark3 .pageContent {
+  background-color: #aaaaaa;
+}
+
+.dark3 .footer {
+  opacity: 0;
+}
+
+/* 2/3Dark */
+
+.dark2 .story-text {
+  color: white
+} 
+
+.dark2 {
+  background-color: #1e1e1e;
+}
+
+.dark2 .pageFrame {
+  background-color: #424242;
+}
+
+.dark2 .pageContent {
+  background-color: #555555;
+}
+
+.dark2 .footer {
+  opacity: 0;
+}
