@@ -310,7 +310,7 @@ body {
 /* 1/3Dark */
 
 .dark3 .story-text {
-  color: white
+  color: #555555
 } 
 
 .dark3 {
@@ -322,17 +322,17 @@ body {
 }
 
 .dark3 .pageContent {
-  background-color: #aaaaaa;
+  background-color: #cccccc;
 }
 
 .dark3 .footer {
-  opacity: 0;
+  opacity: 0.66;
 }
 
 /* 2/3Dark */
 
 .dark2 .story-text {
-  color: white
+  color: #cccccc
 } 
 
 .dark2 {
@@ -348,5 +348,5 @@ body {
 }
 
 .dark2 .footer {
-  opacity: 0;
+  opacity: 0.33;
 }
