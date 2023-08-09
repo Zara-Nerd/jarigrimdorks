@@ -221,6 +221,32 @@ body {
   color: #000;
 }
 
+/* ZSUNSET */
+
+.zsunset .story-text {
+  color: black
+} 
+
+.zsunset {
+  background-color: #F1CCB5;
+}
+
+.zsunset .pageFrame {
+  background-color: #F1CCB5;
+}
+
+.zsunset .pageContent {
+  background-color: #F1CCB5;
+}
+
+.bright .footer {
+  opacity: 0;
+}
+
+.zsunset .navList a:nth-child(n):nth-child(-n+1) {
+  color: #F1CCB5;
+}
+
 /* SUNSET */
 
 .sunset, .sunset * { transition: background-color 40s; }
