@@ -156,6 +156,64 @@ body {
   font-size: 1.1em;
 }
 
+/* Home page */
+
+#homewrap {
+	position: fixed;
+	inset: 0;
+	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	
+	background-image: url(https://file.garden/X1htvgJ0DEp_tp-Z/jari/backgrounds/BackgroundZara-f.png), url(https://file.garden/X1htvgJ0DEp_tp-Z/jari/backgrounds/BackgroundZara-b.png);
+	background-color: black;
+	
+	background-size: cover;
+	background-position: center, center;
+  font-family: zara;
+}
+
+#logo {
+	max-width: 100vw;
+}
+
+#readbtn {
+	width: 90vw;
+	max-width: 732px;
+	aspect-ratio: 723 / 175;
+	background-image: url(https://file.garden/X1htvgJ0DEp_tp-Z/jari/ButtonStill.png);
+	background-size: cover;
+	margin: -60px auto 0;
+}
+
+#readbtn:hover {
+	background-image: url(https://file.garden/X1htvgJ0DEp_tp-Z/jari/ButtonHover.png);
+}
+
+#readbtn:active {
+	background-image: url(https://file.garden/X1htvgJ0DEp_tp-Z/jari/ButtonPress.png);
+}
+
+#home a {
+	display: block;
+	font-size: 2em;
+	text-decoration: none;
+	color: #ff0048;
+	text-shadow: 
+		0 0 3px black, 
+		0 0 3px black, 
+		0 0 3px black, 
+		0 0 3px black, 
+		0 0 3px black;
+	margin: 1em;
+}
+
+#home a:hover {
+	color: #830025;
+}
+
 /* TRANSITIONS */
 
 * { transition: background-color 1s; }
