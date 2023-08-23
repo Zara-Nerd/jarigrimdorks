@@ -11,6 +11,33 @@ window.onload = () => {
       console.log("vriska")
     }
 
+    // Homepage
+
+    const bgs = [
+      "BackgroundZara",
+      "BackgroundAS"
+    ]
+    
+    if (document.getElementById("homewrap")) {
+      let bg = bgs[Math.floor(Math.random()*bgs.length)];
+      let f = `url(https://file.garden/X1htvgJ0DEp_tp-Z/jari/backgrounds/${bg}-f.png)`
+      let b = `url(https://file.garden/X1htvgJ0DEp_tp-Z/jari/backgrounds/${bg}-b.png)`
+      console.log(bg)
+      
+      document.getElementById("homewrap").style.setProperty('--f', f)
+      document.getElementById("homewrap").style.setProperty('--b', b)
+      
+      console.log(document.getElementById("homewrap"), urls)
+    }
+
+  })
+
+  addEventListener("mousemove", (e) => {
+    let posX = (-e.clientX + window.innerWidth / 2) * 0.1 - window.innerWidth / 20;
+    let posY = (-e.clientY + window.innerHeight / 2) * 0.1 - window.innerHeight / 20;
+    
+    document.body.style.setProperty('--x', posX);
+    document.body.style.setProperty('--y', posY);
   })
 }
 
