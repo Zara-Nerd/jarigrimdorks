@@ -22,7 +22,7 @@ window.onload = () => {
       let bg = bgs[Math.floor(Math.random()*bgs.length)];
       let f = `url(https://file.garden/X1htvgJ0DEp_tp-Z/jari/backgrounds/${bg}-f.png)`
       let b = `url(https://file.garden/X1htvgJ0DEp_tp-Z/jari/backgrounds/${bg}-b.png)`
-      console.log(bg)
+      // console.log(bg)
       
       document.getElementById("homewrap").style.setProperty('--f', f)
       document.getElementById("homewrap").style.setProperty('--b', b)
@@ -37,7 +37,7 @@ window.onload = () => {
     let lenX = aspectRatio > 16 / 9 ? 0 : window.innerHeight / 9 * 16 / 2 - window.innerWidth / 2
     let lenY = aspectRatio > 16 / 9 ? window.innerWidth / 16 * 9 / 2 - window.innerHeight / 2 : 0
 
-    console.log(aspectRatio > 16 / 9)
+    // console.log(aspectRatio > 16 / 9)
 
     let posX = (-e.clientX + window.innerWidth / 2) / 11  - lenX - window.innerWidth / 11 / 2
     let posY = (-e.clientY + window.innerHeight / 2) / 11  - lenY - window.innerHeight / 11 / 2
