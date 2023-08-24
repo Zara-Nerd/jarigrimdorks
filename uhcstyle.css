@@ -175,17 +175,17 @@ body {
   font-family: zara;
 }
 
-@media (min-aspect-ratio: 16/9) {
-  #homewrap {
-    background-size: 110%;
-  }
-}
-
 @media only screen and (min-width: 600px) {
   #homewrap {
     background-image: var(--f), var(--b);
     background-size: auto 110%;
     background-position: calc(var(--x) * 1px) calc(var(--y) * 1px);
+  }
+}
+
+@media (min-aspect-ratio: 16/9) {
+  #homewrap {
+    background-size: 110% auto !important;
   }
 }
 

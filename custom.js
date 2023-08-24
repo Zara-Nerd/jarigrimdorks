@@ -33,8 +33,14 @@ window.onload = () => {
   })
 
   addEventListener("mousemove", (e) => {
-    let posX = (-e.clientX + window.innerWidth / 2) * 0.1 - window.innerWidth / 20;
-    let posY = (-e.clientY + window.innerHeight / 2) * 0.1 - window.innerHeight / 20;
+    let aspectRatio = window.innerWidth / window.innerHeight
+    let lenX = aspectRatio > 16 / 9 ? 0 : window.innerHeight / 9 * 16 / 2 - window.innerWidth / 2
+    let lenY = aspectRatio > 16 / 9 ? window.innerWidth / 16 * 9 / 2 - window.innerHeight / 2 : 0
+
+    console.log(aspectRatio > 16 / 9)
+
+    let posX = (-e.clientX + window.innerWidth / 2) / 11  - lenX - window.innerWidth / 11 / 2
+    let posY = (-e.clientY + window.innerHeight / 2) / 11  - lenY - window.innerHeight / 11 / 2
     
     document.body.style.setProperty('--x', posX);
     document.body.style.setProperty('--y', posY);
