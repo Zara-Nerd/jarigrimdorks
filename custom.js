@@ -37,14 +37,38 @@ window.onload = () => {
     let lenX = aspectRatio > 16 / 9 ? 0 : window.innerHeight / 9 * 16 / 2 - window.innerWidth / 2
     let lenY = aspectRatio > 16 / 9 ? window.innerWidth / 16 * 9 / 2 - window.innerHeight / 2 : 0
 
-    // console.log(aspectRatio > 16 / 9)
-
     let posX = (-e.clientX + window.innerWidth / 2) / 11  - lenX - window.innerWidth / 11 / 2
     let posY = (-e.clientY + window.innerHeight / 2) / 11  - lenY - window.innerHeight / 11 / 2
     
     document.body.style.setProperty('--x', posX);
     document.body.style.setProperty('--y', posY);
   })
+}
+
+const setBodyClass = (intervals, currentTime, page) => {
+  let className = ""
+  intervals.forEach(interval => {
+    if (interval[0] < currentTime) {
+      className = interval[1]
+    }
+  })
+  document.body.className = `mspfa p${page} ${className}`
+}
+
+const transitions = {
+  69: [
+    [0, "dark"],
+    [18, ""],
+  ],
+  111: [
+    [67, "sunset"],
+    [117.5, "twilight"],
+    [121.5, "nightsky"],
+    [138, "nightsky widescreen"],
+    [144.5, "dark widescreen"],
+    [238, "dark"],
+    [241, ""],
+  ],
 }
 
 setInterval(() => {
@@ -56,23 +80,15 @@ setInterval(() => {
     }
   }
 
-  if (document.querySelector(".p111 video")) {
-    let vidTime = document.querySelector(".p111 video").currentTime
-    
-    document.body.className = "mspfa p111"
-    if (vidTime > 67 && vidTime < 144.5) document.body.className = "mspfa p111 sunset"
-    if (vidTime > 117.5 && vidTime < 144.5) document.body.className = "mspfa p111 twilight"
-    if (vidTime > 121.5 && vidTime < 144.5) document.body.className = "mspfa p111 nightsky"
-    if (vidTime > 138 && vidTime < 144.5) document.body.className = "mspfa p111 nightsky widescreen"
-    if (vidTime > 144.5 && vidTime < 241) document.body.className = "mspfa p111 dark widescreen"
-    if (vidTime > 238 && vidTime < 241) document.body.className = "mspfa p111 dark"
+  // Transitions
+
+  for (const [page, intervals] of Object.entries(transitions)) {
+
+    if (document.querySelector(`.p${page} video`)) {
+      let vidTime = document.querySelector(`.p${page} video`).currentTime
+      if (vidTime > 0) { setBodyClass(intervals, vidTime, page) }
+    }
+
   }
 
-  if (document.querySelector(".p69 video")) {
-    let vidTime = document.querySelector(".p69 video").currentTime
-
-    
-    if (vidTime < 18) document.body.className = "mspfa p69 dark"
-    else document.body.className = "mspfa p69"
-  }
 }, 100);
