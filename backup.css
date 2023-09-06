@@ -10,7 +10,9 @@
 }
 
 #content {
+/*  padding: 0 25px; */
   line-height: 1.15;
+/*  margin: 0 0 30px 0; */
   font-size: 16px;
   text-align: left;
   font-weight: normal;
@@ -34,6 +36,11 @@
 	display: none;
 }
 
+* { transition: background-color 1s;}
+.mspfalogo { transition: opacity 1s; }
+#slide > * { transition: color 1s; }
+#info * { transition: none; }
+
 video {
   width: 650px;
   transition: width .5s;
@@ -45,10 +52,6 @@ video {
 
 .dropdown {
   background-color: #535353;
-}
-
-#links > div::before {
-  content: "> ";
 }
 
 /* WIDESCREEN */
@@ -77,110 +80,186 @@ video {
   width: 200px
 }
 
+/* DARK */
+
+.dark #slide {
+  color: white
+} 
+
+.dark, .dark body, .dark nav, .dark .dropdown, .dark #info {
+  background-color: #000;
+}
+
+.dark #main {
+  background-color: #000;
+}
+
+.dark #slide {
+  background-color: #000;
+}
+
+.dark .mspfalogo {
+  opacity: 0;
+}
+
+/* BRIGHT */
+
+.bright #slide {
+  color: black
+} 
+
+.bright, .bright body, .bright nav, .bright .dropdown, .bright #info {
+  background-color: #fff;
+}
+
+.bright #main {
+  background-color: #fff;
+}
+
+.bright #slide {
+  background-color: #fff;
+}
+
+.bright .mspfalogo {
+  opacity: 0;
+}
+
+.bright .navList a:nth-child(n):nth-child(-n+1) {
+  color: #000;
+}
+
+/* ZSUNSET */
+
+.zsunset #slide {
+  color: black
+} 
+
+.zsunset, .zsunset body, .zsunset nav, .zsunset .dropdown, .zsunset #info {
+  background-color: #F1CCB5;
+}
+
+.zsunset #main {
+  background-color: #F1CCB5;
+}
+
+.zsunset #slide {
+  background-color: #F1CCB5;
+}
+
+.zsunset .mspfalogo {
+  opacity: 0;
+}
+
+.zsunset .navList a:nth-child(n):nth-child(-n+1) {
+  color: #F1CCB5;
+}
+
+/* SUNSET */
+
+.sunset, .sunset * { transition: background-color 40s; }
+.sunset .mspfalogo { transition: opacity 40s; }
+
+.sunset, .sunset body, .sunset nav, .sunset .dropdown, .sunset #info {
+  background-color: #673133;
+}
+
+.sunset #main {
+  background-color: #e28e5b;
+}
+
+.sunset #slide {
+  background-color: #fec75e;
+}
+
+.sunset .mspfalogo {
+  opacity: 0.5;
+}
+
+/* TWILIGHT */
+
+.twilight, .twilight * { transition: background-color 1s; }
+.twilight .mspfalogo { transition: opacity 1s; }
+
+.twilight, .twilight body, .twilight nav, .twilight .dropdown, .twilight #info {
+  background-color: #2f0804;
+}
+
+.twilight #main {
+  background-color: #bc3617;
+}
+
+.twilight #slide {
+  background-color: #ff6829;
+}
+
+.twilight .mspfalogo {
+  opacity: 0.5;
+}
+
+/* NIGHTSKY */
+
+.nightsky, .nightsky body, .nightsky nav, .nightsky .dropdown, .nightsky #info {
+  background-color: #22274e !important;
+}
+
+.nightsky #main {
+  background-color: #608ce6 !important;
+}
+
+.nightsky #slide {
+  background-color: #c6fcff !important;
+}
+
+.nightsky .mspfalogo {
+  opacity: 0.5;
+}
+
+/* 1/3Dark */
+
+.dark3 #slide {
+  color: #555555
+} 
+
+.dark3, .dark3 body, .dark3 nav, .dark3 .dropdown, .dark3 #info {
+  background-color: #3c3c3c;
+}
+
+.dark3 #main {
+  background-color: #848484;
+}
+
+.dark3 #slide {
+  background-color: #cccccc;
+}
+
+.dark3 .mspfalogo {
+  opacity: 0.66;
+}
+
+/* 2/3Dark */
+
+.dark2 #slide {
+  color: #cccccc
+} 
+
+.dark2, .dark2 body, .dark2 nav, .dark2 .dropdown, .dark2 #info {
+  background-color: #1e1e1e;
+}
+
+.dark2 #main {
+  background-color: #424242;
+}
+
+.dark2 #slide {
+  background-color: #555555;
+}
+
+.dark2 .mspfalogo {
+  opacity: 0.33;
+}
+
 .mspfalogo {
-  background-image: url("https://grimdorks.net/mspalogo_mspa.png") !important;
-}
-
-/* TRANSITIONS */
-
-:root {
-  --Cbg: #5a5a5a;
-  --Cframe: #c6c6c6;
-  --Ccontent: white;
-  --Ccolor: black;
-  --Ofooter: 1;
-
-  --Clink1: #fff;
-  --Clink2: #29ff4a;
-  --Clink3: #39d5f6;
-  --Clink4: #f7f72a;
-  --Clink5: #ffb529;
-
-  --transDuration: 1s;
-}
-
-body, nav, .dropdown, #info { background-color: var(--Cbg); }
-#main { background-color: var(--Cframe); }
-#slide { 
-  background-color: var(--Ccontent); 
-  color: var(--Ccolor);
-}
-.mspfalogo { opacity: var(--Ofooter); }
-
-nav a[style="color: #ffbc3e;"] { color: var(--Clink1) !important; }
-nav a[style="color: #ffffff;"] { color: var(--Clink2) !important; }
-nav a[style="color: #39d5f6;"] { color: var(--Clink3) !important; }
-nav a[style="color: #2cff4b;"], nav a[style="color: rgb(44, 255, 75);"] { color: var(--Clink4) !important; }
-nav a[style="color: #fffa36;"] { color: var(--Clink5) !important; }
-
-* { transition: background-color var(--transDuration);}
-.mspfalogo { transition: opacity var(--transDuration); }
-#slide > * { transition: color var(--transDuration); }
-#info * { transition: none; }
-
-/* COLOR THEMES  */
-
-.dark {
-  --Cbg: #000;
-  --Cframe: #000;
-  --Ccontent: #000;
-  --Ccolor: #fff;
-  --Ofooter: 0;
-}
-
-.bright {
-  --Cbg: #fff;
-  --Cframe: #fff;
-  --Ccontent: #fff;
-  --Ccolor: #000;
-  --Ofooter: 0;
-  --Clink1: #000;
-}
-
-.sunset {
-  --Cbg: #673133;
-  --Cframe: #e28e5b;
-  --Ccontent: #fec75e;
-  --Ofooter: 0.5;
-  --transDuration: 40s;
-}
-
-.twilight {
-  --Cbg: #2f0804;
-  --Cframe: #bc3617;
-  --Ccontent: #ff6829;
-  --Ofooter: 0.5;
-}
-
-.nightsky {
-  --Cbg: #22274e;
-  --Cframe: #608ce6;
-  --Ccontent: #c6fcff;
-  --Ofooter: 0.5;
-}
-
-.dark3 {
-  --Cbg: #3c3c3c;
-  --Cframe: #848484;
-  --Ccontent: #cccccc;
-  --Ccolor: #555555;
-  --Ofooter: 0.66;
-}
-
-.dark2 {
-  --Cbg: #cccccc;
-  --Cframe: #424242;
-  --Ccontent: #555555;
-  --Ofooter: 0.33;
-}
-
-.zsunset {
-  --Cbg: #F1CCB5;
-  --Cframe: #F1CCB5;
-  --Ccontent: #F1CCB5;
-  --Ccolor: #000;
-  --Ofooter: 0;
-  --Clink5: #000;
+    background-image: url("https://grimdorks.net/mspalogo_mspa.png") !important;
 }
 
 /* Paradox Space */

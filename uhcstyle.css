@@ -3,7 +3,6 @@ video {
   transition: width .5s;
 }
 
-
 @font-face {
   font-family: zara;
   src: url(./BAHNSCHRIFT.TTF);
@@ -360,6 +359,8 @@ body { background-color: var(--Cbg); }
   background-position: top, bottom;
   position: relative;
   font-family: Century Gothic,arial,sans-serif;
+  min-height: 100vh;
+  --transDuration: 0.5s;
 }
 
 .paradox nav {
@@ -387,6 +388,7 @@ body { background-color: var(--Cbg); }
   margin-top: 27px;
   padding: 0;
   margin-top: 0;
+  min-height: calc(100vh - 31px);
 }
 
 .paradox .pageContent {
