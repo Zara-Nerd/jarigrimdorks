@@ -1,1 +1,0 @@
-const jsonURL = "https://zara-nerd.github.io/jari-data/bonus.json"
