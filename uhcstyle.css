@@ -149,21 +149,30 @@ body {
   font-size: 1.1em;
 }
 
-.bonusBox {
+#content .bonusBox {
 	display: flex;
 	text-align: center;
   font-family: 'Courier New', Courier, monospace;
+  gap: 0.5em;
 }
 
-.bonusBox a {
+#content h1 {
+  margin-top: 0.5em;
+}
+
+#content .bonusBox img {
+  margin: 0;
+}
+
+#content .bonusBox a {
 	display: block;
 }
 
-.bonusBox div {
+#content .bonusBox div {
 	flex-grow: 1;
 }
 
-.bonusBox div a {
+#content .bonusBox div a {
 	font-size: 1.5em;
 	padding-top: 0.5em;
 }
