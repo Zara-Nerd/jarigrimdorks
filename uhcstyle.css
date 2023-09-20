@@ -149,6 +149,25 @@ body {
   font-size: 1.1em;
 }
 
+.bonusBox {
+	display: flex;
+	text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.bonusBox a {
+	display: block;
+}
+
+.bonusBox div {
+	flex-grow: 1;
+}
+
+.bonusBox div a {
+	font-size: 1.5em;
+	padding-top: 0.5em;
+}
+
 /* Home page */
 
 #homewrap {
