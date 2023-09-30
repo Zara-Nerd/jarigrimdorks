@@ -69,6 +69,17 @@ const transitions = {
     [238, "dark"],
     [241, ""],
   ],
+  "test": [
+    [0, "zsunset"],
+    [7, "none wide750 width13"],
+    [19.6, "none wide700 width05"],
+    [19.9, "none wide950 width5"],
+    [22, "none vidonly tzmusic wide950 width5"],
+    [24.3, "none vidonly tzmusic wide850"],
+    [40, "none vidonly tzmusic tzjohntalk wide850"],
+    [55.3, "none vidonly tzskaia wide850"],
+    [58, "none vidonly tzskaia tzskLeft wide850"],
+  ]
 }
 
 setInterval(() => {
@@ -77,6 +88,9 @@ setInterval(() => {
     document.getElementById("play").onclick = () => {
       document.querySelector("video").play()
       document.querySelector("#play").remove()
+      if (document.querySelector("warning")) {
+        document.querySelector("warning").remove()
+      }
     }
   }
 
@@ -87,6 +101,7 @@ setInterval(() => {
     if (document.querySelector(`.p${page} video`)) {
       let vidTime = document.querySelector(`.p${page} video`).currentTime
       if (vidTime > 0) { setBodyClass(intervals, vidTime, page) }
+      document.querySelector(`.p${page} video`).controls = true
     }
 
   }

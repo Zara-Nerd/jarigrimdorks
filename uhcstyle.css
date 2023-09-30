@@ -268,6 +268,11 @@ body {
   --transDuration: 1s;
 }
 
+warning {
+  display: block;
+  text-align: center;
+}
+
 body { background-color: var(--Cbg); }
 .pageFrame { background-color: var(--Cframe); }
 .pageContent { background-color: var(--Ccontent); }
@@ -285,6 +290,14 @@ body { background-color: var(--Cbg); }
 .story-text { transition: color var(--transDuration); }
 
 /* COLOR THEMES  */
+
+.none {
+  --Cbg: #000;
+  --Cframe: transparent;
+  --Ccontent: transparent;
+  --Ccolor: transparent;
+  --Ofooter: 0;
+}
 
 .dark {
   --Cbg: #000;
@@ -349,11 +362,105 @@ body { background-color: var(--Cbg); }
   --Clink5: #848484;
 }
 
-/* WIDESCREEN */
+/* VIDEO */
+
+.vidonly a, .vidonly nav {
+  opacity: 0;
+  transition: opacity 2s;
+}
 
 .widescreen video {
   transition: width 10s;
   width: 950px;
+}
+
+.wide700 video { width: 700px; }
+.wide750 video { width: 750px; }
+.wide850 video { width: 850px; }
+.wide950 video { width: 950px; }
+
+.width13 video { transition: width 13s ease-in; }
+.width1 video { transition: width 1s; }
+.width05 video { transition: width 0.2s; }
+
+.none .pageFrame {
+  padding-top: calc(50vh - 400px);
+  transition: all 1s;
+}
+
+/* BACKGROUND ASSETS */
+
+.fixed {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+
+  transition: all 1s;
+  opacity: 0;
+
+  background-size: 100%;
+  background-position: center;
+}
+
+#fixed1 { --count: 1 }
+#fixed2 { --count: 2 }
+#fixed3 { --count: 3 }
+#fixed4 { --count: 4 }
+#fixed5 { --count: 5 }
+#fixed6 { --count: 6 }
+
+.tzmusic .fixed {
+  transition: all 8s;
+  transition-delay: calc(var(--count) * 1s);
+
+  animation: bounce 15s infinite;
+  animation-delay: calc(var(--count) * 0.5s);
+
+  opacity: 1;
+}
+
+.tzmusic {
+  --bgSky: #000;
+
+  height: 100vh;
+  background-image: linear-gradient(180deg, var(--bgSky) 0%, #000 25%);
+  background-size: 100% 200%;
+  background-position: 0% 100%;
+  transition: background-position 5s;
+}
+
+.tzmusic #fixed1 { background-image: url(https://file.garden/YB22oQJoG19Io7Up/jari%3Adota/misc/Sound%20Page%20Site%20Assets/Terezi%3A%20Dream/1.png); }
+.tzmusic #fixed2 { background-image: url(https://file.garden/YB22oQJoG19Io7Up/jari%3Adota/misc/Sound%20Page%20Site%20Assets/Terezi%3A%20Dream/2.png); }
+.tzmusic #fixed3 { background-image: url(https://file.garden/YB22oQJoG19Io7Up/jari%3Adota/misc/Sound%20Page%20Site%20Assets/Terezi%3A%20Dream/3.png); }
+.tzmusic #fixed4 { background-image: url(https://file.garden/YB22oQJoG19Io7Up/jari%3Adota/misc/Sound%20Page%20Site%20Assets/Terezi%3A%20Dream/4.png); }
+.tzmusic #fixed5 { background-image: url(https://file.garden/YB22oQJoG19Io7Up/jari%3Adota/misc/Sound%20Page%20Site%20Assets/Terezi%3A%20Dream/5.png); }
+.tzmusic #fixed6 { background-image: url(https://file.garden/YB22oQJoG19Io7Up/jari%3Adota/misc/Sound%20Page%20Site%20Assets/Terezi%3A%20Dream/6.png); }
+
+@keyframes bounce {
+  0% { top: -20vh }
+  50% { top: 20vh }
+  100% { top: -20vh }
+}
+
+.tzjohntalk .fixed {
+  transform: translateY(50vh);
+}
+
+.tzjohntalk {
+  --bgSky: #4b3b53;
+  background-position: 0% 0%;
+}
+
+
+.tzskaia {
+  background-image: linear-gradient(90deg, #000 20%, #a6405c 40%, #a6405c 60%, #000 80%);
+  background-size: 500% 100%;
+  background-position: 100% 0%;
+}
+
+.tzskLeft {
+  background-position: 20% 0%;
+  transition: background-position 30s;
 }
 
 /* PLAY BUTTON */
