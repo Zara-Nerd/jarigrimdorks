@@ -79,6 +79,19 @@ const transitions = {
     [40, "none vidonly tzmusic tzjohntalk wide850"],
     [55.3, "none vidonly tzskaia wide850"],
     [58, "none vidonly tzskaia tzskLeft wide850"],
+    [82.5, "none vidonly tzskaia tzskLeft tzHouse1 wide850"],
+    [87.5, "none vidonly tzskaia tzskLeft tzHouse2 wide850"],
+    [91.2, "none vidonly tzskaia tzskLeft tzHouse3 wide850"],
+    [93.2, "none vidonly tzskaia tzskLeft tzHouse4 wide850"],
+    [100, "none vidonly tzskaia tzskLeft tzLeftFade tzHouse4 wide850"],
+    [117, "none vidonly tzskaia tzskLeft tzLeftFade tzHouse4 wide700"],
+    [133, "none vidonly tzskaia tzskLeft tzLeftFade tzHouse5 wide700"],
+    [140, "none vidonly tzmusic tzHouse5 wide700"],
+    [153, "none vidonly tzmusic tzHouse5 wide950"],
+    [162.4, "none vidonly tzmusic tzHouse5 wide950 tzvideoTilt"],
+    [162.4, "none vidonly tzmusic tzHouse6 wide700 tzvideoTilt"],
+    [169.9, "none vidonly wide950 notrans"],
+    [185, "dark slowtrans"],
   ]
 }
 
@@ -101,7 +114,9 @@ setInterval(() => {
     if (document.querySelector(`.p${page} video`)) {
       let vidTime = document.querySelector(`.p${page} video`).currentTime
       if (vidTime > 0) { setBodyClass(intervals, vidTime, page) }
-      document.querySelector(`.p${page} video`).controls = true
+
+      // Testing
+      // document.querySelector(`.p${page} video`).controls = true
     }
 
   }
